@@ -1,0 +1,47 @@
+<!-- Implment the three method of applying the CSS:
+1. Inline styling, 2. Internal styling, 3. External stying  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="A10styles.css">
+    <title>Document</title>
+
+    <style>
+     .internal-style {
+      background-color: lightblue;
+      color: darkblue;
+      padding: 20px;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+    </style>
+
+
+</head>
+<body>
+
+ <h2>1. Inline CSS</h2>
+  <div style="background-color: yellow; color: black; padding: 20px; margin: 10px 0;">
+    This div uses <strong>inline CSS</strong>.
+    <p>Here I apply a Inline CSS</p>
+  </div>
+
+  <h2>2. Internal CSS</h2>
+  <div class="internal-style">
+    This div uses <strong>internal CSS</strong>.
+     <p>Here I apply a Internal CSS</p>
+  </div>
+
+  <h2>3. External CSS</h2>
+  <div class="external-style">
+    This div uses <strong>external CSS</strong>.
+     <p>Here I apply a external CSS</p>
+  </div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!-- Implement the universal selector, class selector, id selector, type selector and attribute selectors -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+
+
+   <style>
+   /* 1. Universal Selector */
+    * {
+      font-family: Arial, sans-serif;
+      margin: 1%;
+      padding: 1%;
+    }
+
+    /* 2. Type Selector */
+    p {
+      color: darkblue;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    /* 3. Class Selector */
+    .highlight {
+      background-color: yellow;
+      padding: 10px;
+    }
+
+    /* 4. ID Selector */
+    #main-heading {
+      color: darkgreen;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* 5. Attribute Selector */
+    input[type="text"] {
+      border: 2px solid blue;
+      padding: 5px;
+      width: 200px;
+    }
+
+    input[placeholder] {
+      background-color: #f0f8ff;
+    }
+
+
+   </style>
+</head>
+<body>
+   
+    <h1 id="main-heading">CSS Selector Demo</h1>
+
+  <p>This is a regular paragraph using <strong>type selector</strong>.</p>
+
+  <p class="highlight">This paragraph uses a <strong>class selector</strong>.</p>
+
+  <input type="text" placeholder="Enter your name">
+
+
+    
+</body>
+</html>
