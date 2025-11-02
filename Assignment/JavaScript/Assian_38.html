@@ -1,0 +1,125 @@
+<!-- Implement the conditionals statements:
+if, if...else, if else...if, switch, ternary operator -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function funCheckEvenOdd() {
+            let inputStr = document.getElementById("num_1").value.trim();
+            if (inputStr == "") {
+                alert("Please Enter the Value..!!")
+                return;
+            }
+            let numInput = Number(inputStr);
+
+            if (numInput % 2 == 0) {
+                alert("Number is a Even Number....!!")
+            }
+            else {
+                alert("Number is a Odd Number...!!")
+            }
+        }
+
+
+
+        function checkGrade() {
+            let mark = document.getElementById("marks").value.trim();
+            if (mark == "") {
+                alert("Please Enter the Value..!!")
+                return;
+            }
+            let marks = Number(mark);
+
+            if (marks >= 90) {
+                alert("Grade: A+");
+            } else if (marks >= 75) {
+                alert("Grade: A");
+            } else if (marks >= 60) {
+                alert("Grade: B");
+            } else if (marks >= 50) {
+                alert("Grade: C");
+            } else {
+                alert("Grade: F");
+            }
+
+        }
+
+
+        // Example: switch statement
+        function checkDay() {
+            let day = document.getElementById("day").value.toLowerCase();
+            switch (day) {
+                case "monday":
+                    alert("Today is Monday");
+                    break;
+                case "tuesday":
+                    alert("Today is Tuesday");
+                    break;
+                case "wednesday":
+                    alert("Today is Wednesday");
+                    break;
+                case "thursday":
+                    alert("Today is Thursday");
+                    break;
+                case "friday":
+                    alert("Today is Friday");
+                    break;
+                case "saturday":
+                case "sunday":
+                    alert("Weekend!");
+                    break;
+                default:
+                    alert("Invalid day entered!");
+            }
+        }
+
+        // Example: Ternary operator
+        function checkAdult() {
+            let age = Number(document.getElementById("age").value);
+           let message =(age>=18) ?"You are adult" :"You are minor";
+            alert(message);
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <h5>if and if__ else Statement</h5>
+        <p>Check Number is Even or Odd</p>
+        <input type="number" id="num_1" placeholder="Enter Number">
+        <button onclick="funCheckEvenOdd()">Check No</button>
+    </div>
+    <hr>
+    <div>
+        <h4>2. Check Grade (if...else if...else)</h4>
+        <input type="number" id="marks" placeholder="Enter marks (0-100)">
+        <button onclick="checkGrade()">Check Grade</button>
+    </div>
+    <hr>
+    <div>
+        <h4>3. Check Day (switch)</h4>
+        <input type="text" id="day" placeholder="Enter day (e.g., Monday)">
+        <button onclick="checkDay()">Check Day</button>
+    </div>
+
+    <hr>
+
+    <div>
+        <h4>4. Check Adult (ternary operator)</h4>
+        <input type="number" id="age" placeholder="Enter your age">
+        <button onclick="checkAdult()">Check Age</button>
+    </div>
+
+
+</body>
+
+</html>

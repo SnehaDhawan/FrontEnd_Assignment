@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .form_Wrapper {
+            padding: 3%;
+            margin: 2%;
+            width: 100%;
+            align-items: center;
+        }
+
+        fieldset {
+            max-width: 500px;
+            width: 100%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #444;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form_Wrapper">
+
+        <form action="/submit_all_inputs" method="post" enctype="multipart/form-data" autocomplete="on"
+            accept-charset="UTF-8" name="registrationForm">
+
+            <!-- Hidden Input -->
+            <input type="hidden" name="form_id" value="REG123">
+
+            <!-- Personal Details -->
+            <fieldset>
+                <legend>Personal Details</legend>
+
+                <div>
+                    <label>Full Name: <input type="text" name="fullname" required></label><br><br>
+                </div>
+
+                <div>
+                    <label>Date of Birth: <input type="date" name="dob" required></label><br><br>
+                </div>
+
+                <div>
+                    <label>Gender:</label><br>
+                    <label><input type="radio" name="gender" value="male"> Male</label><br>
+                    <label><input type="radio" name="gender" value="female"> Female</label><br>
+                    <label><input type="radio" name="gender" value="other"> Other</label><br><br>
+                </div>
+
+                <div>
+                    <label>Phone Number: <input type="tel" name="phone" required></label><br><br>
+                </div>
+
+                <div>
+                    <label>Email: <input type="email" name="email" required></label><br><br>
+                </div>
+
+                <div>
+                    <label>Country:</label>
+                    <select name="country">
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                        <option value="other">Other</option>
+                    </select><br><br>
+                </div>
+            </fieldset>
+
+            <!-- Educational Details -->
+            <fieldset>
+                <legend>🎓 Educational Details</legend>
+
+                <div>
+                    <label>Highest Qualification:</label>
+                    <select name="qualification" required>
+                        <option value="">-- Select --</option>
+                        <option value="highschool">High School</option>
+                        <option value="bachelors">Bachelor's Degree</option>
+                        <option value="masters">Master's Degree</option>
+                        <option value="phd">Ph.D</option>
+                    </select><br><br>
+                </div>
+
+                <div>
+                    <label>Year of Graduation: <input type="month" name="grad_month"></label><br><br>
+                </div>
+
+                <div>
+                    <label>Marks / GPA: <input type="number" name="marks" step="0.01" min="0" max="10"></label><br><br>
+                </div>
+            </fieldset>
+
+            <!-- Account Details -->
+            <fieldset>
+                <legend>Account Details</legend>
+
+                <div>
+                    <label>Username: <input type="text" name="username" required></label><br><br>
+                </div>
+                <div>
+                    <label>Password: <input type="password" name="password" required></label><br><br>
+                </div>
+            </fieldset>
+
+
+
+            <!-- Upload Documents -->
+            <fieldset>
+                <legend>Upload Documents</legend>
+
+                <div>
+                    <label>Resume (PDF):
+                        <input type="file" name="resume" accept=".pdf"></label><br><br>
+                </div>
+
+                <div>
+                    <label>Profile Photo:
+                        <input type="file" name="profile_photo" accept="image/*"></label><br><br>
+                </div>
+            </fieldset>
+
+            <!-- Comments -->
+            <fieldset>
+                <legend> Additional Comments</legend>
+                <div>
+                    <textarea name="comments" rows="5" cols="50" placeholder="Write your message..."></textarea><br><br>
+                </div>
+
+                <div>
+                    <label>Terms and Condition</label><br>
+                    <span><input type="checkbox" name="terms" />I accepted all trems and condition</span>
+                </div>
+            </fieldset>
+
+           <fieldset> 
+            <div>
+                <input type="submit" value="Submit Form"> &nbsp; &nbsp;
+                <input type="reset" value="Reset Form"><br><br>
+            </div>
+            </fieldset>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
