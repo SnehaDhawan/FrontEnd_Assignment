@@ -1,0 +1,104 @@
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <title>All CSS Pseudo-elements Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+      padding: 30px;
+    }
+
+    /* -------------------- 1. ::before and ::after -------------------- */
+    .quote {
+      position: relative;
+      font-style: italic;
+      font-size: 1.4em;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    .quote::before {
+      content: "“";
+      color: #888;
+      font-size: 2em;
+      position: absolute;
+      left: -20px;
+    }
+
+    .quote::after {
+      content: "”";
+      color: #888;
+      font-size: 2em;
+      position: absolute;
+      right: -20px;
+    }
+
+    /* -------------------- 2. ::first-letter -------------------- */
+    .story::first-letter {
+      font-size: 2.5em;
+      color: #0077cc;
+      font-weight: bold;
+      float: left;
+      padding-right: 8px;
+    }
+
+    /* -------------------- 3. ::first-line -------------------- */
+    .story::first-line {
+      text-transform: uppercase;
+      color: crimson;
+    }
+
+    /* -------------------- 4. ::selection -------------------- */
+    ::selection {
+      background-color: yellow;
+      color: black;
+    }
+
+    /* -------------------- 5. ::marker -------------------- */
+    ul li::marker {
+      color: orange;
+      font-size: 1.3em;
+    }
+
+    /* -------------------- 6. ::placeholder -------------------- */
+    input::placeholder {
+      color: rgb(185, 21, 21);
+      font-style: italic;
+      border: #0077cc;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>🌟 All CSS Pseudo-elements Example</h2>
+
+  <!-- ::before and ::after -->
+  <p class="quote">The journey of a thousand miles begins with a single step.</p>
+
+  <!-- ::first-letter and ::first-line -->
+  <p class="story">
+    Once upon a time, a curious developer learned about CSS pseudo-elements. They discovered how to style specific parts of a webpage with just a few lines of CSS.
+  </p>
+
+  <!-- ::marker -->
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+  <!-- ::placeholder -->
+  <input type="text" placeholder="Enter your name">
+
+
+
+</body>
+</html>

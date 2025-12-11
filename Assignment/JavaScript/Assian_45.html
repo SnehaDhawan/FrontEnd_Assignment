@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Object Functions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 30px;
+    }
+    h1 {
+      color: #333;
+    }
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 10px;
+      border-radius: 5px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Object Functions (Simple Examples)</h1>
+  <pre id="output"></pre>
+
+  <script>
+    // Example object
+    let person = {
+      name: "Alice",
+      age: 25,
+      city: "New York"
+    };
+
+    let result = "";
+
+    // 1️⃣ Access properties
+    result += "1. Access property: " + person.name + "\n";
+
+    // 2️⃣ Add new property
+    person.country = "USA";
+    result += "2. Add property: " + JSON.stringify(person) + "\n";
+
+    // 3️⃣ Update property
+    person.age = 26;
+    result += "3. Update property: " + JSON.stringify(person) + "\n";
+
+    // 4️⃣ Delete property
+    delete person.city;
+    result += "4. Delete property: " + JSON.stringify(person) + "\n";
+
+    // 5️⃣ Object.keys()
+    result += "5. Object.keys(): " + Object.keys(person) + "\n";
+
+    // 6️⃣ Object.values()
+    result += "6. Object.values(): " + Object.values(person) + "\n";
+
+    // 7️⃣ Object.entries()
+    result += "7. Object.entries(): " + JSON.stringify(Object.entries(person)) + "\n";
+
+    // 8️⃣ Object.assign()
+    let copyPerson = {};
+    Object.assign(copyPerson, person);
+    result += "8. Object.assign(): " + JSON.stringify(copyPerson) + "\n";
+
+    // 9️⃣ Object.freeze()
+    Object.freeze(copyPerson);
+    copyPerson.age = 30; // Will not change
+    result += "9. Object.freeze(): " + JSON.stringify(copyPerson) + "\n";
+
+    // 🔟 Object.seal()
+    let sealedObj = { a: 1, b: 2 };
+    Object.seal(sealedObj);
+    sealedObj.a = 10; // Can update
+    delete sealedObj.b; // Cannot delete
+    result += "10. Object.seal(): " + JSON.stringify(sealedObj) + "\n";
+
+    // 11️⃣ Object.hasOwnProperty()
+    result += "11. hasOwnProperty('name'): " + person.hasOwnProperty("name") + "\n";
+
+    // 12️⃣ Object.is()
+    result += "12. Object.is(10, 10): " + Object.is(10, 10) + "\n";
+    result += "    Object.is(10, '10'): " + Object.is(10, '10') + "\n";
+
+    // 13️⃣ Object.getOwnPropertyNames()
+    result += "13. getOwnPropertyNames(): " + Object.getOwnPropertyNames(person) + "\n";
+
+    // 14️⃣ Object.getPrototypeOf()
+    result += "14. getPrototypeOf(): " + Object.getPrototypeOf(person) + "\n";
+
+    document.getElementById("output").textContent = result;
+  </script>
+
+</body>
+</html>

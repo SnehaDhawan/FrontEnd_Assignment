@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Array Functions Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 30px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #333;
+    }
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 10px;
+      border-radius: 5px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Array Functions (Simple Examples)</h1>
+  <pre id="output"></pre>
+
+  <script>
+    let arr = [10, 20, 30, 40, 50];
+    let result = "";
+
+    // 1️⃣ length
+    result += "1. length: " + arr.length + "\n";
+
+    // 2️⃣ toString()
+    result += "2. toString(): " + arr.toString() + "\n";
+
+    // 3️⃣ join()
+    result += "3. join(' - '): " + arr.join(" - ") + "\n";
+
+    // 4️⃣ push()
+    arr.push(60);
+    result += "4. push(60): " + arr + "\n";
+
+    // 5️⃣ pop()
+    arr.pop();
+    result += "5. pop(): " + arr + "\n";
+
+    // 6️⃣ unshift()
+    arr.unshift(5);
+    result += "6. unshift(5): " + arr + "\n";
+
+    // 7️⃣ shift()
+    arr.shift();
+    result += "7. shift(): " + arr + "\n";
+
+    // 8️⃣ concat()
+    let more = [70, 80];
+    let combined = arr.concat(more);
+    result += "8. concat([70, 80]): " + combined + "\n";
+
+    // 9️⃣ slice()
+    result += "9. slice(1, 3): " + arr.slice(1, 3) + "\n";
+
+    // 🔟 splice()
+    arr.splice(2, 0, 25);
+    result += "10. splice(2, 0, 25): " + arr + "\n";
+
+    // 11️⃣ indexOf()
+    result += "11. indexOf(30): " + arr.indexOf(30) + "\n";
+
+    // 12️⃣ lastIndexOf()
+    result += "12. lastIndexOf(30): " + arr.lastIndexOf(30) + "\n";
+
+    // 13️⃣ includes()
+    result += "13. includes(20): " + arr.includes(20) + "\n";
+
+    // 14️⃣ reverse()
+    result += "14. reverse(): " + arr.slice().reverse() + "\n";
+
+    // 15️⃣ sort()
+    let unsorted = [3, 1, 5, 2, 4];
+    result += "15. sort(): " + unsorted.sort() + "\n";
+
+    // 16️⃣ map()
+    let mapped = arr.map(x => x * 2);
+    result += "16. map(x * 2): " + mapped + "\n";
+
+    // 17️⃣ filter()
+    let filtered = arr.filter(x => x > 25);
+    result += "17. filter(x > 25): " + filtered + "\n";
+
+    // 18️⃣ reduce()
+    let sum = arr.reduce((total, x) => total + x, 0);
+    result += "18. reduce(sum): " + sum + "\n";
+
+    // 19️⃣ forEach()
+    let text = "";
+    arr.forEach(x => text += x + " ");
+    result += "19. forEach(): " + text + "\n";
+
+    // 20️⃣ find()
+    let found = arr.find(x => x > 25);
+    result += "20. find(x > 25): " + found + "\n";
+
+    // 21️⃣ findIndex()
+    let foundIndex = arr.findIndex(x => x > 25);
+    result += "21. findIndex(x > 25): " + foundIndex + "\n";
+
+    // 22️⃣ some()
+    result += "22. some(x > 45): " + arr.some(x => x > 45) + "\n";
+
+    // 23️⃣ every()
+    result += "23. every(x > 5): " + arr.every(x => x > 5) + "\n";
+
+    // 24️⃣ fill()
+    let filled = arr.slice();
+    filled.fill(100, 1, 3);
+    result += "24. fill(100, 1, 3): " + filled + "\n";
+
+    // 25️⃣ flat()
+    let nested = [1, [2, 3], [4, [5, 6]]];
+    result += "25. flat(2): " + nested.flat(2) + "\n";
+
+    // 26️⃣ Array.isArray()
+    result += "26. Array.isArray(arr): " + Array.isArray(arr) + "\n";
+
+    // 27️⃣ from()
+    result += "27. Array.from('Hello'): " + Array.from('Hello') + "\n";
+
+    // 28️⃣ keys()
+    let keys = [...arr.keys()];
+    result += "28. keys(): " + keys + "\n";
+
+    // 29️⃣ entries()
+    let entries = [...arr.entries()].map(e => e.join(":"));
+    result += "29. entries(): " + entries.join(", ") + "\n";
+
+    // 30️⃣ copyWithin()
+    let copyArr = [1, 2, 3, 4, 5];
+    copyArr.copyWithin(0, 3);
+    result += "30. copyWithin(0,3): " + copyArr + "\n";
+
+    document.getElementById("output").textContent = result;
+  </script>
+
+</body>
+</html>

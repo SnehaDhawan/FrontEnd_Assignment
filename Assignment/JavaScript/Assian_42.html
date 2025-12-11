@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All String Functions Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 30px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #333;
+    }
+    h2 {
+      color: #0066cc;
+    }
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript String Functions (Simple Examples)</h1>
+  <pre id="output"></pre>
+
+  <script>
+    // Example string
+    let text = "  Hello World from JavaScript!  ";
+
+    let result = "";
+
+    // 1️⃣ length
+    result += "1. Length: " + text.length + "\n";
+
+    // 2️⃣ toUpperCase()
+    result += "2. toUpperCase(): " + text.toUpperCase() + "\n";
+
+    // 3️⃣ toLowerCase()
+    result += "3. toLowerCase(): " + text.toLowerCase() + "\n";
+
+    // 4️⃣ trim()
+    result += "4. trim(): '" + text.trim() + "'\n";
+
+    // 5️⃣ slice(start, end)
+    result += "5. slice(2, 9): " + text.slice(2, 9) + "\n";
+
+    // 6️⃣ substring(start, end)
+    result += "6. substring(2, 9): " + text.substring(2, 9) + "\n";
+
+    // 7️⃣ substr(start, length)
+    result += "7. substr(2, 5): " + text.substr(2, 5) + "\n";
+
+    // 8️⃣ replace()
+    result += "8. replace('World', 'Universe'): " + text.replace("World", "Universe") + "\n";
+
+    // 9️⃣ replaceAll() (ES2021+)
+    result += "9. replaceAll(' ', '_'): " + text.replaceAll(" ", "_") + "\n";
+
+    // 🔟 concat()
+    result += "10. concat(): " + text.concat(" Let's learn!") + "\n";
+
+    // 11️⃣ charAt()
+    result += "11. charAt(1): " + text.charAt(1) + "\n";
+
+    // 12️⃣ charCodeAt()
+    result += "12. charCodeAt(1): " + text.charCodeAt(1) + "\n";
+
+    // 13️⃣ indexOf()
+    result += "13. indexOf('World'): " + text.indexOf("World") + "\n";
+
+    // 14️⃣ lastIndexOf()
+    result += "14. lastIndexOf('o'): " + text.lastIndexOf("o") + "\n";
+
+    // 15️⃣ includes()
+    result += "15. includes('Java'): " + text.includes("Java") + "\n";
+
+    // 16️⃣ startsWith()
+    result += "16. startsWith('  He'): " + text.startsWith("  He") + "\n";
+
+    // 17️⃣ endsWith()
+    result += "17. endsWith('!  '): " + text.endsWith("!  ") + "\n";
+
+    // 18️⃣ split()
+    result += "18. split(' '): " + text.split(" ") + "\n";
+
+    // 19️⃣ repeat()
+    result += "19. repeat(2): " + text.trim().repeat(2) + "\n";
+
+    // 20️⃣ padStart() and padEnd()
+    result += "20. padStart(30, '*'): " + text.trim().padStart(30, '*') + "\n";
+    result += "    padEnd(30, '*'): " + text.trim().padEnd(30, '*') + "\n";
+
+    document.getElementById("output").textContent = result;
+  </script>
+
+</body>
+</html>

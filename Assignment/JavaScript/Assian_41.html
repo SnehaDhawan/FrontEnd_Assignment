@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Utility Functions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 30px;
+    }
+    h2 {
+      color: #0066cc;
+    }
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>General Utility Functions in JavaScript</h1>
+
+  <h2>Output:</h2>
+  <pre id="output"></pre>
+
+  <script>
+    // ✅ 1. Add two numbers
+    function add(a, b) {
+      return a + b;
+    }
+
+    // ✅ 2. Find the maximum number in an array
+    function findMax(arr) {
+      return Math.max(...arr);
+    }
+
+    // ✅ 3. Check if a number is even
+    function isEven(num) {
+      return num % 2 === 0;
+    }
+
+    // ✅ 4. Reverse a string
+    function reverseString(str) {
+      return str.split('').reverse().join('');
+    }
+
+    // ✅ 5. Convert Celsius to Fahrenheit
+    function celsiusToFahrenheit(celsius) {
+      return (celsius * 9/5) + 32;
+    }
+
+    // ✅ 6. Generate a random number between min and max
+    function randomNumber(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    // Display results
+    let output = "";
+    output += "Add(5, 10) = " + add(5, 10) + "\n";
+    output += "Max of [4, 7, 2, 9, 5] = " + findMax([4, 7, 2, 9, 5]) + "\n";
+    output += "Is 8 even? " + isEven(8) + "\n";
+    output += "Reverse of 'hello' = " + reverseString("hello") + "\n";
+    output += "25°C in Fahrenheit = " + celsiusToFahrenheit(25) + "°F\n";
+    output += "Random number (1–10) = " + randomNumber(1, 10) + "\n";
+
+    document.getElementById("output").textContent = output;
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Number Functions Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 30px;
+    }
+    h1 {
+      color: #333;
+    }
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 10px;
+      border-radius: 5px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Number Functions (Simple Examples)</h1>
+  <pre id="output"></pre>
+
+  <script>
+    let num = 123.4567;
+    let numString = "45.67";
+    let result = "";
+
+    // 1️⃣ toString()
+    result += "1. toString(): " + num.toString() + "\n";
+
+    // 2️⃣ toFixed()
+    result += "2. toFixed(2): " + num.toFixed(2) + "\n";
+
+    // 3️⃣ toPrecision()
+    result += "3. toPrecision(4): " + num.toPrecision(4) + "\n";
+
+    // 4️⃣ Number() - Convert string to number
+    result += "4. Number('45.67'): " + Number(numString) + "\n";
+
+    // 5️⃣ parseInt()
+    result += "5. parseInt('45.67'): " + parseInt(numString) + "\n";
+
+    // 6️⃣ parseFloat()
+    result += "6. parseFloat('45.67'): " + parseFloat(numString) + "\n";
+
+    // 7️⃣ isNaN()
+    result += "7. isNaN('Hello'): " + isNaN("Hello") + "\n";
+
+    // 8️⃣ Number.isInteger()
+    result += "8. Number.isInteger(123): " + Number.isInteger(123) + "\n";
+
+    // 9️⃣ Number.isFinite()
+    result += "9. Number.isFinite(100/5): " + Number.isFinite(100/5) + "\n";
+
+    // 🔟 Math.round()
+    result += "10. Math.round(4.6): " + Math.round(4.6) + "\n";
+
+    // 11️⃣ Math.floor()
+    result += "11. Math.floor(4.9): " + Math.floor(4.9) + "\n";
+
+    // 12️⃣ Math.ceil()
+    result += "12. Math.ceil(4.1): " + Math.ceil(4.1) + "\n";
+
+    // 13️⃣ Math.trunc()
+    result += "13. Math.trunc(4.9): " + Math.trunc(4.9) + "\n";
+
+    // 14️⃣ Math.pow()
+    result += "14. Math.pow(2, 3): " + Math.pow(2, 3) + "\n";
+
+    // 15️⃣ Math.sqrt()
+    result += "15. Math.sqrt(25): " + Math.sqrt(25) + "\n";
+
+    // 16️⃣ Math.abs()
+    result += "16. Math.abs(-7): " + Math.abs(-7) + "\n";
+
+    // 17️⃣ Math.min()
+    result += "17. Math.min(5, 2, 9): " + Math.min(5, 2, 9) + "\n";
+
+    // 18️⃣ Math.max()
+    result += "18. Math.max(5, 2, 9): " + Math.max(5, 2, 9) + "\n";
+
+    // 19️⃣ Math.random()
+    result += "19. Math.random(): " + Math.random() + "\n";
+
+    // 20️⃣ Math.sign()
+    result += "20. Math.sign(-10): " + Math.sign(-10) + "\n";
+
+    document.getElementById("output").textContent = result;
+  </script>
+
+</body>
+</html>

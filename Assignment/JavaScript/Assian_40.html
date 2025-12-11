@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loops with Break and Continue</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 30px;
+    }
+    h2 {
+      color: #0066cc;
+    }
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Loop Statements with <code>break</code> and <code>continue</code></h1>
+
+  <h2>Example 1️⃣: for Loop with <code>break</code></h2>
+  <pre id="breakExample"></pre>
+
+  <h2>Example 2️⃣: for Loop with <code>continue</code></h2>
+  <pre id="continueExample"></pre>
+
+  <script>
+    // 1️⃣ for loop with break
+    let breakOutput = "";
+    for (let i = 1; i <= 10; i++) {
+      if (i === 6) {
+        break; // stop the loop when i = 6
+      }
+      breakOutput += "Number: " + i + "\n";
+    }
+    document.getElementById("breakExample").textContent = breakOutput;
+
+    // 2️⃣ for loop with continue
+    let continueOutput = "";
+    for (let j = 1; j <= 10; j++) {
+      if (j === 5) {
+        continue; // skip number 5
+      }
+      continueOutput += "Number: " + j + "\n";
+    }
+    document.getElementById("continueExample").textContent = continueOutput;
+  </script>
+
+</body>
+</html>

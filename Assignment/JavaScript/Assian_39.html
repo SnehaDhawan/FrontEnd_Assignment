@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop Statements Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 30px;
+      line-height: 1.6;
+    }
+    h2 {
+      color: #0066cc;
+      border-bottom: 2px solid #0066cc;
+      width: fit-content;
+    }
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Loop Statements in JavaScript</h1>
+
+  <h2>1 for Loop</h2>
+  <pre id="forLoop"></pre>
+
+  <h2>2 while Loop</h2>
+  <pre id="whileLoop"></pre>
+
+  <h2>3 do...while Loop</h2>
+  <pre id="doWhileLoop"></pre>
+
+  <h2>4 for...of Loop (Arrays)</h2>
+  <pre id="forOfLoop"></pre>
+
+  <h2>5 for...in Loop (Objects)</h2>
+  <pre id="forInLoop"></pre>
+
+  <script>
+    // 1️⃣ for loop
+    let forResult = "";
+    for (let i = 1; i <= 5; i++) {
+      forResult += "Count: " + i + "\n";
+    }
+    document.getElementById("forLoop").textContent = forResult;
+
+    // 2️⃣ while loop
+    let whileResult = "";
+    let j = 1;
+    while (j <= 5) {
+      whileResult += "Number: " + j + "\n";
+      j++;
+    }
+    document.getElementById("whileLoop").textContent = whileResult;
+
+    // 3️⃣ do...while loop
+    let doWhileResult = "";
+    let k = 1;
+    do {
+      doWhileResult += "Iteration: " + k + "\n";
+      k++;
+    } while (k <= 5);
+    document.getElementById("doWhileLoop").textContent = doWhileResult;
+
+    // 4️⃣ for...of loop (used for arrays)
+    const fruits = ["Apple", "Banana", "Cherry"];
+    let forOfResult = "";
+    for (const fruit of fruits) {
+      forOfResult += fruit + "\n";
+    }
+    document.getElementById("forOfLoop").textContent = forOfResult;
+
+    // 5️⃣ for...in loop (used for objects)
+    const person = { name: "John", age: 25, city: "New York" };
+    let forInResult = "";
+    for (const key in person) {
+      forInResult += key + ": " + person[key] + "\n";
+    }
+    document.getElementById("forInLoop").textContent = forInResult;
+  </script>
+</body>
+</html>

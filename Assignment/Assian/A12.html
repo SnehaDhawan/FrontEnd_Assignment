@@ -1,13 +1,113 @@
+<!-- Implement the different psudo classes  -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Psudo Classes</title>
+<style>
+
+ /* Button Styles */
+    .btn {
+      width: 120px;
+      padding: 8px;
+      border: 1px solid #333;
+      background-color: lightgray;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    /* 1. :hover — when mouse hovers over */
+    .btn:hover {
+      background-color: aqua;
+    }
+
+    /* 2. :active — when button is clicked */
+    .btn:active {
+      background-color: lightgreen;
+    }
+
+    /* 3. :focus — when element is focused (clicked or tabbed to) */
+    .btn:focus {
+      outline: 2px solid blue;
+    }
+
+    /* 4. :first-child — first element of its parent */
+    p:first-child {
+      color: red;
+      font-weight: bold;
+    }
+
+    /* 5. :last-child — last element of its parent */
+    p:last-child {
+      color: purple;
+    }
+
+    /* 6. :nth-child(odd/even) — alternate row colors */
+    li:nth-child(odd) {
+      background-color: #f0f0f0;
+    }
+
+    li:nth-child(even) {
+      background-color: #d0f0ff;
+    }
+
+    /* 7. :visited — for visited links */
+    a:visited {
+      color: darkmagenta;
+    }
+
+    /* 8. :link — for unvisited links */
+    a:link {
+      color: blue;
+    }
+
+    /* 9. :checked — for checked checkboxes */
+    input:checked + label {
+      color: green;
+      font-weight: bold;
+    }
+
+</style>
 </head>
 <body>
     
 
+  <h2>Different CSS Pseudo-Classes</h2>
+
+  <button class="btn">Click me</button>
+
+  <hr>
+
+  <h3>Paragraphs</h3>
+  <div>
+    <p>This is the first paragraph (first-child)</p>
+    <p>This is the second paragraph</p>
+    <p>This is the last paragraph (last-child)</p>
+  </div>
+
+  <hr>
+
+  <h3>List Items (:nth-child)</h3>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+
+  <hr>
+
+  <h3>Links (:link and :visited)</h3>
+  <a href="https://www.google.com" target="_blank">Google</a> |
+  <a href="https://www.example.com" target="_blank">Example</a>
+
+  <hr>
+
+  <h3>Checkbox (:checked)</h3>
+  <input type="checkbox" id="agree">
+  <label for="agree">I agree to the terms</label>
     
 </body>
 </html>
